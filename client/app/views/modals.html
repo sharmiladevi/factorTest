@@ -1,0 +1,47 @@
+<div id="login-modal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" onclick="$('#login-modal').hide();">&times;</button>
+                <h4 class="modal-title">Login</h4>
+            </div>
+            <div class="modal-body">
+              <input id="email" type="text" placeholder="email"/>
+              <input id="password" type="password" placeholder="password"/>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="$('#login-modal').hide();">Close</button>
+                <button type="button" class="btn btn-primary" ng-click='login();'>Login</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="signup-modal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" onclick="$('#signup-modal').hide();">&times;</button>
+                <h4 class="modal-title">Signup</h4>
+            </div>
+            <div class="modal-body">
+              <input id="firstname" type="text" placeholder="firstname"></input>
+              <input id="lastname" type="text" placeholder="lastname"></input>
+              <select id="userType" >
+                <option>Select user type</option>
+                <option>Admin</option>
+                <option>Editor</option>
+                <option>Author</option>
+                <option>Contributor</option>
+                <option>Reader</option>
+              </select></br>
+              <input id="email" type="text" placeholder="email"></input>
+              <input id="password" type="password" placeholder="password"></input>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="$('#signup-modal').hide();">Close</button>
+                <button type="button" class="btn btn-primary" ng-click='createAcct();'>Signup</button>
+            </div>
+        </div>
+    </div>
+</div>

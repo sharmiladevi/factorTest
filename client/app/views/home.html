@@ -1,0 +1,92 @@
+<!-- <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12' style='padding-left: 0px; padding-right : 0px;'>
+	<p>Welcome {{username}} </p>
+	<a href="#/logout" style="float:left;margin-top:15px" id="btnLogout" class="displayNone">logout</a>
+</div>
+
+<div id='createStoryPart'>
+	<button ng-click="createStory();" id='btnCreateStory'>Create Story</button>
+</div>
+
+<div class='displayNone home' id = "editorPart">
+	<div class='col-lg-9 col-md-9 col-sm-9 col-xs-12'>
+
+		<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12'>
+		<input ng-model = "ko.title" placeholder="Enter Title"></input>
+		</div>
+		<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12'>
+		<input ng-model = "ko.description" placeholder="Enter Description"></input>
+		</div>
+		<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12'>
+		<input ng-model = "ko.koWeight" placeholder="Enter Weight"></input>
+		</div>
+	</div>
+
+	<div class='col-lg-3 col-md-3 col-sm-3 col-xs-12'>
+		<div class='koimage' ng-click='uploadImage();'>
+			<img ng-src='{{ko.thumbnail}}'>
+		</div>
+	</div>
+
+
+	<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12'>
+		<div class=''>
+		</div>
+	<div class="margin10px" id="myEditor"></div>
+	<button id="saveButton" ng-click = "saveChanges();">Save</button>
+	</div>
+
+
+</div> -->
+
+<div class='home-page' style='min-height: 100vh;'>
+	<div class='row'>
+		<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 padding-left-right-0'>
+			<div class='profile-det-holder'>
+				<div class='profile-pic' ng-click='changeAvatar();'>
+					<img ng-src='{{profile.profile_img}}'/>
+				</div>
+				<div class='bio-details'>
+					<h2>
+						{{username}}
+					</h2>
+					<div class='bio'>
+						<textarea placeholder='Bio here ...' ng-model='profile.bio' class='editable'>
+
+						</textarea>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class=''>
+	<div ng-repeat = 'ko in kos' style='margin-top: 10px;'>
+		<div class='col-lg-3 col-md-3 col-sm-6 col-xs-12' style='padding-left: 0px; padding-right: 0px;'>
+			<div class='card'>
+				<img ng-src='{{ko.thumbnail}}'>
+				<h2> {{ko.title}} </h2>
+				<p> {{ko.description}} </h2>
+			</div>
+			<div class='pubunpub'>
+				<div ng-if="ko.status == 'published'">
+					<button ng-click='kounPublish(ko.storyId);'> Unpublish </button>
+				</div>
+				<div ng-if="ko.status == 'unpublished'">
+					<button ng-click='kopublish(ko.storyId);'> Publish </button>
+				</div>
+				<!--<button > Unpublish </button>
+				<button > Publish </button>-->
+				<!-- <img src='./images/unpublish.png'>
+				<img src='./images/publish.png'> -->
+				<!-- <input id="toggle-event" type="checkbox" data-toggle="toggle">
+				<div class="toggle-group"><label class="btn btn-primary toggle-on">On</label><label class="btn btn-default active toggle-off">Off</label><span class="toggle-handle btn btn-default"></span></div>
+				<div class='pubbtn' ng-click='pubUnPub();'> -->
+					<!-- <div class='circle'>
+					</div> -->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

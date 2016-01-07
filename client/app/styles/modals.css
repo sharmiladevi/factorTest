@@ -1,0 +1,17 @@
+.modal {
+  background-color: rgba(0, 0, 0, 0.34) !important;
+  opacity: 1 !important;
+}
+.modal.fade .modal-dialog {
+  webkit-transition: -webkit-transform 1s ease-out;
+  -o-transition: -o-transform 1s ease-out;
+  transition: transform 1s ease-out;
+  -webkit-transform: translate(0,40%);
+  -ms-transform: translate(0,40%);
+  -o-transform: translate(0,40%);
+  transform: translate(0,40%);
+}
+
+.modal select {
+  margin-top: 10px;
+}

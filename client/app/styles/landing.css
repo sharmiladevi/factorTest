@@ -1,0 +1,59 @@
+.modal input:not(:first-child){
+	margin-top: 10px;
+}
+.landing-page {
+	background-image: url('../images/background-lp.jpg');
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+
+.landing-content {
+	margin-top: 200px;
+}
+
+.landing-content h1 {
+	font-size: 5vw;
+}
+
+.action-buttons-holder {
+	margin-top: 50px;
+}
+@media (min-width: 768px) {
+	.action-buttons-holder button {
+		font-size: 17px;
+		width: 120px;
+		box-shadow: 0px 1px 4px 0px black;
+		border-radius: 30px;
+		border: 2px solid white;
+		padding: 10px;
+		/*margin-left: 30px;*/
+		/*display: inline-block;*/
+	}
+
+	.action-buttons-holder button:hover {
+		width: 140px;
+		padding: 15px;
+	}
+
+}
+
+@media (max-width: 768px) {
+	.action-buttons-holder button {
+		font-size: 13px;
+		width: 80px;
+		box-shadow: 0px 1px 4px 0px black;
+		border-radius: 30px;
+		border: 2px solid white;
+		padding: 10px;
+		/*margin-left: 30px;*/
+		/*display: inline-block;*/
+	}
+
+	.action-buttons-holder button:hover {
+		width: 100px;
+		padding: 12px;
+	}
+
+}
